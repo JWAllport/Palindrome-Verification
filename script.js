@@ -3,7 +3,8 @@ const checkBtn = document.getElementById("check-btn");
 checkBtn.addEventListener("click", checkPalindrome);
 
 
-function checkPalindrome() {
+function checkPalindrome(event) {
+  event.preventDefault();
   const input = document.getElementById("text-input").value.toLowerCase();
   if (!input) {
     alert("Please input a value");
